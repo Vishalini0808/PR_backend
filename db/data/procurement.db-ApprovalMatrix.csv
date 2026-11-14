@@ -1,0 +1,3 @@
+ID,matrixCode,approvalLevel,sequenceNumber,minimumAmount,maximumAmount,currency,approverRole,createdAt,createdBy,modifiedAt,modifiedBy,status
+ffffffff-ffff-ffff-ffff-ffffffffffff,APR-MGR,1,1,0,,INR,Department Manager,2026-11-11T09:00:00Z,system,2026-11-11T09:00:00Z,system,ACTIVE
+10101010-1010-1010-1010-101010101010,APR-FIN,2,2,50000,,INR,Finance Approver,2026-11-11T09:00:00Z,system,2026-11-11T09:00:00Z,system,ACTIVE

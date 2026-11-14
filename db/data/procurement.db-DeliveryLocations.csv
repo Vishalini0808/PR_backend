@@ -1,0 +1,3 @@
+ID,locationCode,locationName,address,city,state,postalCode,country,createdAt,createdBy,modifiedAt,modifiedBy,status
+aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa,CHN,Chennai Office,Guindy,Chennai,Tamil Nadu,600032,India,2026-11-11T09:00:00Z,system,2026-11-11T09:00:00Z,system,ACTIVE
+bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb,BLR,Bangalore Office,Electronic City,Bangalore,Karnataka,560100,India,2026-11-11T09:00:00Z,system,2026-11-11T09:00:00Z,system,ACTIVE

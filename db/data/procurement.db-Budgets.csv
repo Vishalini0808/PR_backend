@@ -1,0 +1,4 @@
+ID,budgetCode,financialYear,allocatedAmount,committedAmount,actualSpentAmount,currency,costCentre_ID,createdAt,createdBy,modifiedAt,modifiedBy,status
+cccccccc-cccc-cccc-cccc-cccccccccccc,BUD-IT-2026,2026,1000000,100000,200000,INR,44444444-4444-4444-4444-444444444444,2026-11-11T09:00:00Z,system,2026-11-11T09:00:00Z,system,ACTIVE
+dddddddd-dddd-dddd-dddd-dddddddddddd,BUD-SW-2026,2026,500000,50000,100000,INR,55555555-5555-5555-5555-555555555555,2026-11-11T09:00:00Z,system,2026-11-11T09:00:00Z,system,ACTIVE
+eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee,BUD-HR-2026,2026,300000,20000,50000,INR,66666666-6666-6666-6666-666666666666,2026-11-11T09:00:00Z,system,2026-11-11T09:00:00Z,system,ACTIVE

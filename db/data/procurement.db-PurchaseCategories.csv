@@ -1,0 +1,4 @@
+ID,categoryCode,categoryName,description,createdAt,createdBy,modifiedAt,modifiedBy,status
+77777777-7777-7777-7777-777777777777,HW,Hardware,Computer and hardware purchases,2026-11-11T09:00:00Z,system,2026-11-11T09:00:00Z,system,ACTIVE
+88888888-8888-8888-8888-888888888888,SW,Software,Software and license purchases,2026-11-11T09:00:00Z,system,2026-11-11T09:00:00Z,system,ACTIVE
+99999999-9999-9999-9999-999999999999,OFFICE,Office Supplies,Office stationery and supplies,2026-11-11T09:00:00Z,system,2026-11-11T09:00:00Z,system,ACTIVE
