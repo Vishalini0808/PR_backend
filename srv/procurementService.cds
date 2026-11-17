@@ -1,9 +1,11 @@
 using {procurement.db as db} from '../db/purchaseRequisitionSchema';
 
 @path: '/procurement'
+@requires: 'authenticated-user'
 service ProcurementService {
 
     // Purchase Requisition
+   
     entity PurchaseRequisitions as projection on db.PurchaseRequisitions;
 
     entity RequisitionItems     as projection on db.RequisitionItems;
@@ -23,8 +25,7 @@ service ProcurementService {
 
     action resubmitPR(prID: UUID) returns many ApprovalTasks;
 
-    action cancelPR(prID: UUID,
-                    reason: String(500));
+    action cancelPR(prID: UUID, reason: String(500));
 
 
     // Approval Actions
@@ -41,8 +42,6 @@ service ProcurementService {
     }
 
     action approvePR(taskID: UUID,
-                     decidedById: String,
-                     decidedByName: String,
                      comments: String(500)) returns ApprovePRResult;
 
     action rejectPR(taskID: UUID,

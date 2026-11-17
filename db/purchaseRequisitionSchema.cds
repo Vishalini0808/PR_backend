@@ -138,7 +138,7 @@ entity ApprovalTasks : cuid, managed {
     status              : ApprovalTaskStatus default #Pending;
 
     // resubmission
-    submissionCycle : Integer default 1;
+    submissionCycle : Integer default 1;      //
 
     requisition : Association to PurchaseRequisitions not null  @assert.target;
 

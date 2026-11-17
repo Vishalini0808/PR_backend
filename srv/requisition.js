@@ -1,5 +1,5 @@
 const cds = require('@sap/cds');
-const { SELECT, UPDATE } = cds.ql;
+const { SELECT, UPDATE, INSERT } = cds.ql;
 
 
 const {
@@ -36,16 +36,6 @@ async function connectMasterData() {
 
 // create PR
 async function validatePR(req) {
-
-    // Connect to remote Master Data application
-    // const masterService = await cds.connect.to('MasterDataService');
-
-    // const {
-    //     OrganizationalUnits,
-    //     CostCentres,
-    //     PurchaseCategories,
-    //     DeliveryLocations
-    // } = masterService.entities;
 
     await connectMasterData();
 
@@ -178,6 +168,8 @@ async function validatePR(req) {
     data.taxAmount = Number(taxAmount.toFixed(2));
     data.totalAmount = Number((netAmount + taxAmount).toFixed(2));
 
+    // // cycle
+    // const cycle = (pr.currentCycle ?? 0) + 1;
 
     // generate PR number
     const lastPR = await SELECT.one.from(PurchaseRequisitions)
@@ -185,7 +177,7 @@ async function validatePR(req) {
         .orderBy({ prNumber: 'desc' });
 
     const lastNumber = lastPR?.prNumber ? Number(lastPR.prNumber.replace('PR', '')) : 1000;
-    data.prNumber = `PR${lastNumber + 1}`;
+    data.prNumber = `PR ${lastNumber + 1}`;
 
     // Initial status
     data.status = 'DRAFT';
@@ -341,8 +333,8 @@ async function submitPR(req) {
 
     console.log(`---available amount: ${availableBudget}---`)
 
-    // pr amount vs available budget
-    if (Number(pr.totalAmount) > availableBudget) {
+    // recalculated pr amount vs available budget
+    if (totalAmount > availableBudget) {
         return req.reject(400, `Insufficient budget!! Available: ${availableBudget} and Required:${pr.totalAmount}`);
     }
 
@@ -369,20 +361,21 @@ async function submitPR(req) {
         );
     }
 
+    // cycle
+    const cycle = (pr.currentCycle ?? 0) + 1;
 
     // Create Approval task
-    const approvalTaskEntries = approvalRules.map((rule,index) => {
+    const approvalTaskEntries = approvalRules.map((rule, index) => {
 
         return {
-            taskNumber : `${pr.prNumber}-A${rule.sequenceNumber}`,
-            approvalLevel : rule.approvalLevel,
-            sequenceNumber : rule.sequenceNumber,
-            approverRole : rule.approverRole,
-
+            taskNumber: `${pr.prNumber}-C${cycle}-A${rule.sequenceNumber}`,
+            approvalLevel: rule.approvalLevel,
+            sequenceNumber: rule.sequenceNumber,
+            approverRole: rule.approverRole,
+            submissionCycle: cycle,
             // status
-            status : index === 0 ? 'PENDING' : 'WAITING',
-
-            requisition_ID : prID
+            status: index === 0 ? 'PENDING' : 'WAITING',
+            requisition_ID: prID
         };
 
     });
@@ -391,17 +384,18 @@ async function submitPR(req) {
 
     await INSERT.into(ApprovalTasks).entries(approvalTaskEntries);
 
-    // fetch the tasks:
+    // fetch the current cycle tasks:
     const approvalTasks = await SELECT.from(ApprovalTasks).where({
-        requisition_ID : prID
+        requisition_ID: prID,
+        submissionCycle: cycle
     }).orderBy('sequenceNumber asc');
 
     // created Approval tasks:
     console.log("Created Approval Tasks:", approvalTasks);
-    
+
 
     // update PR status
-    await UPDATE(PurchaseRequisitions).set({ status : 'IN_APPROVAL'}).where({ID: prID});
+    await UPDATE(PurchaseRequisitions).set({ status: 'IN_APPROVAL', currentCycle: cycle }).where({ ID: prID });
 
     console.log(`PR submitted successfully and approval workflow initiated`);
 
@@ -433,6 +427,10 @@ async function resubmitPR(req) {
             `Cannot resubmit PR with ${pr.status} status`
         );
     }
+
+    // if (pr.requesterId !== req.user.id) {
+    //     return req.reject(403, 'Only the original requester can resubmit this PR.');
+    // }
 
     // Reuse existing submission logic
     return submitPR(req);

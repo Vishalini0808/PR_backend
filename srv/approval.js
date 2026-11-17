@@ -39,6 +39,7 @@ async function approvePR(req) {
     const previousTask = await SELECT.one.from(ApprovalTasks)
         .where({
             requisition_ID: task.requisition_ID,
+            submissionCycle: task.submissionCycle,
             sequenceNumber: { '<': task.sequenceNumber },
             status: { '!=': 'APPROVED' }
         });
@@ -52,13 +53,10 @@ async function approvePR(req) {
 
     // create approval decision and comments
 
-    const decisionID = cds.utils.uuid();
-
     await INSERT.into(ApprovalDecisions).entries({
-        ID: decisionID,
         decision: 'APPROVE',
-        decidedByName: req.data.decidedByName,
-        decidedById: req.data.decidedById,
+        decidedByName: req.user.id,
+        decidedById: req.user.id,
         comments: req.data.comments,
         task_ID: taskID
     });
@@ -78,6 +76,7 @@ async function approvePR(req) {
     //  fetch next waiting next task:
     const nextTask = await SELECT.one.from(ApprovalTasks).where({
         requisition_ID: task.requisition_ID,
+        submissionCycle: task.submissionCycle,
         status: 'WAITING',
         sequenceNumber: { '>': task.sequenceNumber }
     }).orderBy('sequenceNumber asc');
@@ -159,9 +158,7 @@ async function rejectPR(req) {
     }
 
     // Create rejection decision
-    const ID = cds.utils.uuid();
     await INSERT.into(ApprovalDecisions).entries({
-        ID: ID,
         decision: 'REJECT',
         comments: comments,
         task_ID: taskID
@@ -177,6 +174,7 @@ async function rejectPR(req) {
         .set({ status: 'CANCELLED' })
         .where({
             requisition_ID: task.requisition_ID,
+            submissionCycle: task.submissionCycle,
             status: { in: ['PENDING', 'WAITING'] }
         });
 
@@ -234,6 +232,7 @@ async function returnPR(req) {
         .set({ status: 'CANCELLED' })
         .where({
             requisition_ID: task.requisition_ID,
+            submissionCycle: task.submissionCycle,
             status: { in: ['PENDING', 'WAITING'] }
         });
 
