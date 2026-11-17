@@ -1,62 +1,59 @@
+using {procurement.db as db} from '../db/purchaseRequisitionSchema';
 
-using procurement.db as db from '../db/purchaseRequisitionSchema';
-
+@path: '/procurement'
 service ProcurementService {
-
-    // Master Data
-    entity OrganizationalUnits as projection on db.OrganizationalUnits;
-    entity CostCentres         as projection on db.CostCentres;
-    entity PurchaseCategories as projection on db.PurchaseCategories;
-    entity DeliveryLocations  as projection on db.DeliveryLocations;
-    entity Budgets            as projection on db.Budgets;
-    entity ApprovalMatrix     as projection on db.ApprovalMatrix;
 
     // Purchase Requisition
     entity PurchaseRequisitions as projection on db.PurchaseRequisitions;
+
     entity RequisitionItems     as projection on db.RequisitionItems;
 
     // Approval
-    entity ApprovalTasks      as projection on db.ApprovalTasks;
-    entity ApprovalDecisions  as projection on db.ApprovalDecisions;
+    entity ApprovalTasks        as projection on db.ApprovalTasks;
+
+    entity ApprovalDecisions    as projection on db.ApprovalDecisions;
 
     // Attachments
-    entity Attachments as projection on db.Attachments;
+    entity Attachments          as projection on db.Attachments;
 
 
-    
-    // PR actions
+    // PR Actions
 
-    action submitPR(prID : UUID);
+    action submitPR(prID: UUID) returns many ApprovalTasks;
 
-    action resubmitPR(prID : UUID);
+    action resubmitPR(prID: UUID) returns many ApprovalTasks;
 
-    action cancelPR(
-        prID   : UUID,
-        reason : String(500)
-    );
+    action cancelPR(prID: UUID,
+                    reason: String(500));
 
 
-    // approval actions
-
-    action approvePR( taskID : UUID, comments : String(500));
-
-    action rejectPR(taskID : UUID, comments : String(500));
-
-    action returnPR(taskID : UUID, comments : String(500));
+    // Approval Actions
 
 
-    // procurement action
+    type ApprovePRResult {
+        taskID      : UUID;
+        taskStatus  : String;
+        prID        : UUID;
+        prStatus    : String;
+        nextTaskID  : UUID; // null when this was the last level
+        allApproved : Boolean;
+        message     : String;
+    }
 
-    action releasePR(prID : UUID);
+    action approvePR(taskID: UUID,
+                     decidedById: String,
+                     decidedByName: String,
+                     comments: String(500)) returns ApprovePRResult;
+
+    action rejectPR(taskID: UUID,
+                    comments: String(500));
+
+    action returnPR(taskID: UUID,
+                    comments: String(500));
 
 
-    // calculation functions
+    // Procurement Action
 
-    function calculatePRTotal(prID : UUID)
-        returns Decimal(15,2);
-
-    function checkBudget(prID : UUID)
-        returns Boolean;
-
+    action releasePR(prID: UUID);
 
 }

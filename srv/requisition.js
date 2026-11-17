@@ -1,18 +1,53 @@
-const { SELECT } = require("@sap/cds/lib/ql/cds-ql");
-const UPDATE = require("@sap/cds/lib/ql/UPDATE");
+const cds = require('@sap/cds');
+const { SELECT, UPDATE } = cds.ql;
 
 
 const {
     PurchaseRequisitions,
     RequisitionItems,
-    OrganizationalUnits,
-    CostCentres,
-    PurchaseCategories,
-    DeliveryLocations } = cds.entities('procurement.db');
+    ApprovalTasks
+} = cds.entities('procurement.db');
+
+let masterService;
+let OrganizationalUnits;
+let CostCentres;
+let PurchaseCategories;
+let DeliveryLocations;
+let Budgets;
+let ApprovalMatrix;
+
+// Initialize remote Master Data connection
+async function connectMasterData() {
+
+    if (!masterService) {
+        masterService = await cds.connect.to('MasterDataService');
+
+        ({
+            OrganizationalUnits,
+            CostCentres,
+            PurchaseCategories,
+            DeliveryLocations,
+            Budgets,
+            ApprovalMatrix
+        } = masterService.entities);
+    }
+}
+
 
 // create PR
 async function validatePR(req) {
 
+    // Connect to remote Master Data application
+    // const masterService = await cds.connect.to('MasterDataService');
+
+    // const {
+    //     OrganizationalUnits,
+    //     CostCentres,
+    //     PurchaseCategories,
+    //     DeliveryLocations
+    // } = masterService.entities;
+
+    await connectMasterData();
 
     const data = req.data;
 
@@ -33,50 +68,51 @@ async function validatePR(req) {
         return req.error(400, 'Requester email is required.');
     }
 
-    if (!data.organizationalUnit_ID) {
+    if (!data.organizationalUnitID) {
         return req.error(400, 'Please select an Organizational Unit.');
     }
 
-    const orgUnit = await SELECT.one
-        .from(OrganizationalUnits)
-        .where({ ID: data.organizationalUnit_ID });
+    const orgUnit = await masterService.run(
+        SELECT.one.from(OrganizationalUnits)
+            .where({ ID: data.organizationalUnitID }));
+
 
     if (!orgUnit || orgUnit.status !== 'ACTIVE') {
         return req.error(400, 'Selected Organizational Unit does not exist or is inactive.');
     }
 
-    if (!data.costCentre_ID) {
+    if (!data.costCentreID) {
         return req.error(400, 'Please select a Cost Centre.');
     }
 
-    const costCentre = await SELECT.one
+    const costCentre = await masterService.run(SELECT.one
         .from(CostCentres)
-        .where({ ID: data.costCentre_ID });
+        .where({ ID: data.costCentreID }));
 
     if (!costCentre || costCentre.status !== 'ACTIVE') {
         return req.error(400, 'Selected Cost Centre does not exist or is inactive.');
     }
 
-    if (costCentre.organizationalUnit_ID !== data.organizationalUnit_ID) {
+    if (costCentre.organizationalUnit_ID !== data.organizationalUnitID) {
         return req.error(400, 'Selected Cost Centre does not belong to the selected Organizational Unit.');
     }
 
-    if (!data.purchaseCategory_ID) {
+    if (!data.purchaseCategoryID) {
         return req.error(400, 'Please select a Purchase Category.');
     }
 
-    const category = await SELECT.one
+    const category = await masterService.run(SELECT.one
         .from(PurchaseCategories)
-        .where({ ID: data.purchaseCategory_ID });
+        .where({ ID: data.purchaseCategoryID }));
 
     if (!category || category.status !== 'ACTIVE') {
         return req.error(400, 'Selected Purchase Category does not exist or is inactive.');
     }
 
-    if (data.deliveryLocation_ID) {
-        const location = await SELECT.one
+    if (data.deliveryLocationID) {
+        const location = await masterService.run(SELECT.one
             .from(DeliveryLocations)
-            .where({ ID: data.deliveryLocation_ID });
+            .where({ ID: data.deliveryLocationID }));
 
         if (!location || location.status !== 'ACTIVE') {
             return req.reject(400, 'Selected Delivery Location does not exist or is inactive.');
@@ -161,6 +197,8 @@ async function validatePR(req) {
 // submit PR
 async function submitPR(req) {
 
+    await connectMasterData();
+
     const { prID } = req.data;
     console.log("PR ID:", prID);
 
@@ -181,19 +219,19 @@ async function submitPR(req) {
 
     // check PR header exists:
     if (!pr.prNumber) {
-        req.error(400, "PR number Missing");
+        return req.reject(400, "PR number Missing");
     }
 
     if (!pr.requesterId || !pr.requesterName || !pr.requesterEmail) {
-        req.error(400, "Requester Details Missing");
+        return req.reject(400, "Requester Details Missing");
     }
 
     if (pr.netAmount == null || pr.taxAmount == null || pr.totalAmount == null) {
-        req.error(400, "PR Calculation fields Missing")
+        return req.reject(400, "PR Calculation fields Missing")
     }
 
-    if (!pr.organizationalUnit_ID || !pr.costCentre_ID || !pr.purchaseCategory_ID) {
-        req.error(400, "PR Reference fileds missing")
+    if (!pr.organizationalUnitID || !pr.costCentreID || !pr.purchaseCategoryID) {
+        return req.reject(400, "PR Reference fileds missing")
     }
 
     // Saved Header Items validation
@@ -209,12 +247,12 @@ async function submitPR(req) {
 
         // Item name val
         if (!item.itemName?.trim()) {
-            req.error(400, "Item name Required");
+            return req.reject(400, "Item name Required");
         }
 
         // item type
         if (!item.itemType) {
-            req.error(400, "Item type required")
+            return req.reject(400, "Item type required")
         }
 
         // Quantity validation
@@ -276,10 +314,129 @@ async function submitPR(req) {
 
 
 
-    // Check budget:
+    // Check budget
+    const financialYear = new Date(pr.needByDate).getUTCFullYear();
 
+    const budget = await masterService.run(
+        SELECT.one.from(Budgets).where({
+            costCentre_ID: pr.costCentreID,
+            financialYear: financialYear,
+            status: 'ACTIVE'
+
+        })
+    );
+
+    console.log("Budget:", JSON.stringify(budget, null, 2));
+
+    // calculate available budget
+    if (!budget) {
+        return req.reject(400, 'No active budget found for this cost centre and financial year!')
+    }
+
+    const allocatedAmount = Number(budget.allocatedAmount);
+    const committedAmount = Number(budget.committedAmount);
+    const actualSpentAmount = Number(budget.actualSpentAmount);
+
+    const availableBudget = allocatedAmount - committedAmount - actualSpentAmount;
+
+    console.log(`---available amount: ${availableBudget}---`)
+
+    // pr amount vs available budget
+    if (Number(pr.totalAmount) > availableBudget) {
+        return req.reject(400, `Insufficient budget!! Available: ${availableBudget} and Required:${pr.totalAmount}`);
+    }
+
+    console.log(`Budget validation successful`);
+
+    // get matching approval matrix 
+    const approvalRules = await masterService.run(
+        SELECT.from(ApprovalMatrix).where`
+            status = 'ACTIVE'
+            and currency = ${pr.currency}
+            and organizationalUnit_ID = ${pr.organizationalUnitID}
+            and purchaseCategory_ID = ${pr.purchaseCategoryID}
+            and minimumAmount <= ${totalAmount}
+            and maximumAmount >= ${totalAmount}
+        `.orderBy('sequenceNumber asc')
+    );
+
+    console.log("Matching Approval Rules:", approvalRules);
+
+    if (!approvalRules || approvalRules.length === 0) {
+        return req.reject(
+            400,
+            'No matching active Approval Matrix found for this PR.'
+        );
+    }
+
+
+    // Create Approval task
+    const approvalTaskEntries = approvalRules.map((rule,index) => {
+
+        return {
+            taskNumber : `${pr.prNumber}-A${rule.sequenceNumber}`,
+            approvalLevel : rule.approvalLevel,
+            sequenceNumber : rule.sequenceNumber,
+            approverRole : rule.approverRole,
+
+            // status
+            status : index === 0 ? 'PENDING' : 'WAITING',
+
+            requisition_ID : prID
+        };
+
+    });
+
+    // insert all approval tasks
+
+    await INSERT.into(ApprovalTasks).entries(approvalTaskEntries);
+
+    // fetch the tasks:
+    const approvalTasks = await SELECT.from(ApprovalTasks).where({
+        requisition_ID : prID
+    }).orderBy('sequenceNumber asc');
+
+    // created Approval tasks:
+    console.log("Created Approval Tasks:", approvalTasks);
+    
+
+    // update PR status
+    await UPDATE(PurchaseRequisitions).set({ status : 'IN_APPROVAL'}).where({ID: prID});
+
+    console.log(`PR submitted successfully and approval workflow initiated`);
+
+    return approvalTasks;
 
 }
 
 
-module.exports = { submitPR, validatePR };
+async function resubmitPR(req) {
+
+    const { prID } = req.data;
+
+    if (!prID) {
+        return req.reject(400, 'PR ID required!');
+    }
+
+    // Find PR
+    const pr = await SELECT.one.from(PurchaseRequisitions)
+        .where({ ID: prID });
+
+    if (!pr) {
+        return req.reject(404, 'Purchase Requisition not found!');
+    }
+
+    // Only returned PRs can be resubmitted
+    if (pr.status !== 'RETURNED') {
+        return req.reject(
+            400,
+            `Cannot resubmit PR with ${pr.status} status`
+        );
+    }
+
+    // Reuse existing submission logic
+    return submitPR(req);
+}
+
+
+module.exports = { submitPR, validatePR, resubmitPR };

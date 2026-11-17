@@ -3,13 +3,28 @@
   "version": "1.0.0",
   "type": "commonjs",
   "dependencies": {
-    "@sap/cds": "^10"
+    "@sap-cloud-sdk/connectivity": "^4.10.0",
+    "@sap/cds": "^10",
+    "@sap-cloud-sdk/http-client": "^4",
+    "@sap-cloud-sdk/resilience": "^4"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^3"
+    "@cap-js/sqlite": "^3",
+    "@sap/cds-dk": "^10"
   },
   "scripts": {
     "start": "cds-serve"
   },
-  "private": true
+  "private": true,
+  "cds": {
+    "requires": {
+      "MasterDataService": {
+        "kind": "odata",
+        "model": "srv/external/MasterDataService",
+        "credentials": {
+          "destination": "PR_masterdata"
+        }
+      }
+    }
+  }
 }
