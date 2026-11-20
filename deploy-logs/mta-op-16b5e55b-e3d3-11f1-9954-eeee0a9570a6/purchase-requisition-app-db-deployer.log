@@ -1,0 +1,460 @@
+#2026 11 19 04:38:50.791#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53822#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:42.043288] Updated app with guid 36c706a8-22ff-4cd3-86ed-beed90f6e833 ({"lifecycle" => {"data" => {"buildpacks" => ["nodejs_buildpack"]}, "type" => "buildpack"}}) (STDOUT, API)#
+#2026 11 19 04:38:50.791#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53822#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:42.140299] Updating process: "web" (STDOUT, API)#
+#2026 11 19 04:38:50.791#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53822#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:43.822638] Cell 684caff8-89cd-492b-be01-b3d0835f1763 creating container for instance e16fc97a-b942-4514-a08c-46b0dab8b0ac (STDOUT, CELL)#
+#2026 11 19 04:38:50.791#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53822#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:44.495112] Security group rules were updated (STDOUT, CELL)#
+#2026 11 19 04:38:50.791#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53822#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:44.562272] Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully created container for instance e16fc97a-b942-4514-a08c-46b0dab8b0ac (STDOUT, CELL)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:50.667938] Invoking pre-start scripts. (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:50.920734] Invoking start command. (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.457015] > start (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.457054] > node node_modules/@sap/hdi-deploy/deploy.js --use-hdb --parameter com.sap.hana.di.table/try_fast_table_migration=true (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.659707] VCAP_SERVICES: (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660506] { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660522] "hana": [ (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660530] { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660535] "name": "purchase-requisition-app-db", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660539] "label": "hana", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660542] "plan": "hdi-shared", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660545] "credentials": { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660554] "schema": "CE7E685F81294764991B716DEDFA4B15", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660557] "database_id": "d5321ba2-bfc3-4fe9-a45d-93a81204fed1", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660561] "user": "CE7E685F81294764991B716DEDFA4B15_4525WO7T3KQR6S7JDO8UFGZ2B_RT", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660564] "hdi_user": "CE7E685F81294764991B716DEDFA4B15_4525WO7T3KQR6S7JDO8UFGZ2B_DT" (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660566] }, (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660569] "tags": [ (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660574] "hana", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660577] "database", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660579] "relational" (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660582] ] (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660584] } (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660586] ] (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660589] } (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.098988] @sap/hdi-deploy, version 5.7.0 (mode default), server version unknown (0.0.0.0), cloud version , node version 24.22.1, HDI version -1, container API version -1 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.099178] Deployment started at 2026-11-19 04:38:56 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.099280] Using hdb@2.30.1 for connection (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.099360] Detection of server version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.099487] Detection of cloud version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.099504] Detection of container API version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.099581] Detection of HDI version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.100084] Deployment ended at 2026-11-19 04:38:56 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.100366] Error: Option parameter is not supported by the server; based on detected server version unknown (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.100594] (4s 572ms) (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.117403] npm notice (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.117462] npm notice New major version of npm available! 11.19.1 -> 12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.117467] npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.117469] npm notice To update run: npm install -g npm@12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.117472] npm notice (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.241313] Exit status 1 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:57.278418] Cell 684caff8-89cd-492b-be01-b3d0835f1763 stopping instance e16fc97a-b942-4514-a08c-46b0dab8b0ac (STDOUT, CELL)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:57.278490] Cell 684caff8-89cd-492b-be01-b3d0835f1763 destroying container for instance e16fc97a-b942-4514-a08c-46b0dab8b0ac (STDOUT, CELL)#
+#2026 11 19 04:39:00.765#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69202#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:00.228598] Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully destroyed container for instance e16fc97a-b942-4514-a08c-46b0dab8b0ac (STDOUT, CELL)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:50.667938] Invoking pre-start scripts. (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:50.920734] Invoking start command. (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.457015] > start (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.457054] > node node_modules/@sap/hdi-deploy/deploy.js --use-hdb --parameter com.sap.hana.di.table/try_fast_table_migration=true (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.659707] VCAP_SERVICES: (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660506] { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660522] "hana": [ (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660530] { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660535] "name": "purchase-requisition-app-db", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660539] "label": "hana", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660542] "plan": "hdi-shared", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660545] "credentials": { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660554] "schema": "CE7E685F81294764991B716DEDFA4B15", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660557] "database_id": "d5321ba2-bfc3-4fe9-a45d-93a81204fed1", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660561] "user": "CE7E685F81294764991B716DEDFA4B15_4525WO7T3KQR6S7JDO8UFGZ2B_RT", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660564] "hdi_user": "CE7E685F81294764991B716DEDFA4B15_4525WO7T3KQR6S7JDO8UFGZ2B_DT" (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660566] }, (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660569] "tags": [ (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660574] "hana", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660577] "database", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660579] "relational" (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660582] ] (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660584] } (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660586] ] (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:51.660589] } (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.098988] @sap/hdi-deploy, version 5.7.0 (mode default), server version unknown (0.0.0.0), cloud version , node version 24.22.1, HDI version -1, container API version -1 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.099178] Deployment started at 2026-11-19 04:38:56 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.099280] Using hdb@2.30.1 for connection (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.099360] Detection of server version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.099487] Detection of cloud version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.099504] Detection of container API version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.099581] Detection of HDI version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.100084] Deployment ended at 2026-11-19 04:38:56 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.100366] Error: Option parameter is not supported by the server; based on detected server version unknown (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.100594] (4s 572ms) (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.117403] npm notice (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.117462] npm notice New major version of npm available! 11.19.1 -> 12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.117467] npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.117469] npm notice To update run: npm install -g npm@12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.117472] npm notice (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:56.241313] Exit status 1 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:57.278418] Cell 684caff8-89cd-492b-be01-b3d0835f1763 stopping instance e16fc97a-b942-4514-a08c-46b0dab8b0ac (STDOUT, CELL)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:38:57.278490] Cell 684caff8-89cd-492b-be01-b3d0835f1763 destroying container for instance e16fc97a-b942-4514-a08c-46b0dab8b0ac (STDOUT, CELL)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:00.228598] Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully destroyed container for instance e16fc97a-b942-4514-a08c-46b0dab8b0ac (STDOUT, CELL)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:03.628893] Cell 684caff8-89cd-492b-be01-b3d0835f1763 creating container for instance c5af5778-6006-44ca-a734-b79e4c935b66 (STDOUT, CELL)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:04.411839] Security group rules were updated (STDOUT, CELL)#
+#2026 11 19 04:39:10.866#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69203#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:04.476473] Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully created container for instance c5af5778-6006-44ca-a734-b79e4c935b66 (STDOUT, CELL)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:11.335008] Invoking pre-start scripts. (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:11.583937] Invoking start command. (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.102192] > start (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.102226] > node node_modules/@sap/hdi-deploy/deploy.js --use-hdb --parameter com.sap.hana.di.table/try_fast_table_migration=true (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296111] VCAP_SERVICES: (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296804] { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296821] "hana": [ (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296832] { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296836] "name": "purchase-requisition-app-db", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296840] "label": "hana", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296843] "plan": "hdi-shared", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296845] "credentials": { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296849] "schema": "CE7E685F81294764991B716DEDFA4B15", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296852] "database_id": "d5321ba2-bfc3-4fe9-a45d-93a81204fed1", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296856] "user": "CE7E685F81294764991B716DEDFA4B15_4525WO7T3KQR6S7JDO8UFGZ2B_RT", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296862] "hdi_user": "CE7E685F81294764991B716DEDFA4B15_4525WO7T3KQR6S7JDO8UFGZ2B_DT" (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296865] }, (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296867] "tags": [ (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296870] "hana", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296875] "database", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296878] "relational" (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296883] ] (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296885] } (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296887] ] (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296889] } (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757005] @sap/hdi-deploy, version 5.7.0 (mode default), server version unknown (0.0.0.0), cloud version , node version 24.22.1, HDI version -1, container API version -1 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757173] Deployment started at 2026-11-19 04:39:16 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757373] Using hdb@2.30.1 for connection (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757413] Detection of server version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757419] Detection of cloud version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757422] Detection of container API version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757425] Detection of HDI version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.758317] Error: Option parameter is not supported by the server; based on detected server version unknown (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.758343] Deployment ended at 2026-11-19 04:39:16 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.758349] (4s 598ms) (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.780565] npm notice (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.780597] npm notice New major version of npm available! 11.19.1 -> 12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.780609] npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.780612] npm notice To update run: npm install -g npm@12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.780615] npm notice (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.869064] Exit status 1 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:18.233257] Cell 684caff8-89cd-492b-be01-b3d0835f1763 stopping instance c5af5778-6006-44ca-a734-b79e4c935b66 (STDOUT, CELL)#
+#2026 11 19 04:39:20.761#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69215#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:18.233312] Cell 684caff8-89cd-492b-be01-b3d0835f1763 destroying container for instance c5af5778-6006-44ca-a734-b79e4c935b66 (STDOUT, CELL)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:11.335008] Invoking pre-start scripts. (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:11.583937] Invoking start command. (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.102192] > start (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.102226] > node node_modules/@sap/hdi-deploy/deploy.js --use-hdb --parameter com.sap.hana.di.table/try_fast_table_migration=true (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296111] VCAP_SERVICES: (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296804] { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296821] "hana": [ (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296832] { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296836] "name": "purchase-requisition-app-db", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296840] "label": "hana", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296843] "plan": "hdi-shared", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296845] "credentials": { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296849] "schema": "CE7E685F81294764991B716DEDFA4B15", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296852] "database_id": "d5321ba2-bfc3-4fe9-a45d-93a81204fed1", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296856] "user": "CE7E685F81294764991B716DEDFA4B15_4525WO7T3KQR6S7JDO8UFGZ2B_RT", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296862] "hdi_user": "CE7E685F81294764991B716DEDFA4B15_4525WO7T3KQR6S7JDO8UFGZ2B_DT" (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296865] }, (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296867] "tags": [ (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296870] "hana", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296875] "database", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296878] "relational" (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296883] ] (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296885] } (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296887] ] (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:12.296889] } (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757005] @sap/hdi-deploy, version 5.7.0 (mode default), server version unknown (0.0.0.0), cloud version , node version 24.22.1, HDI version -1, container API version -1 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757173] Deployment started at 2026-11-19 04:39:16 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757373] Using hdb@2.30.1 for connection (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757413] Detection of server version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757419] Detection of cloud version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757422] Detection of container API version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.757425] Detection of HDI version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.758317] Error: Option parameter is not supported by the server; based on detected server version unknown (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.758343] Deployment ended at 2026-11-19 04:39:16 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.758349] (4s 598ms) (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.780565] npm notice (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.780597] npm notice New major version of npm available! 11.19.1 -> 12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.780609] npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.780612] npm notice To update run: npm install -g npm@12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.780615] npm notice (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:16.869064] Exit status 1 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:18.233257] Cell 684caff8-89cd-492b-be01-b3d0835f1763 stopping instance c5af5778-6006-44ca-a734-b79e4c935b66 (STDOUT, CELL)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:18.233312] Cell 684caff8-89cd-492b-be01-b3d0835f1763 destroying container for instance c5af5778-6006-44ca-a734-b79e4c935b66 (STDOUT, CELL)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:22.070377] Cell c839c7b1-088e-41af-b9b7-66256aacd457 creating container for instance 3d150212-f741-426e-b84c-5e4679c66be3 (STDOUT, CELL)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:22.184098] Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully destroyed container for instance c5af5778-6006-44ca-a734-b79e4c935b66 (STDOUT, CELL)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:22.775427] Security group rules were updated (STDOUT, CELL)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:22.830093] Cell c839c7b1-088e-41af-b9b7-66256aacd457 successfully created container for instance 3d150212-f741-426e-b84c-5e4679c66be3 (STDOUT, CELL)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:28.357537] Invoking pre-start scripts. (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:28.595531] Invoking start command. (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.077481] > start (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.077514] > node node_modules/@sap/hdi-deploy/deploy.js --use-hdb --parameter com.sap.hana.di.table/try_fast_table_migration=true (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.246314] VCAP_SERVICES: (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247008] { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247029] "hana": [ (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247036] { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.827#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247043] "name": "purchase-requisition-app-db", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247047] "label": "hana", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247050] "plan": "hdi-shared", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247053] "credentials": { (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247056] "schema": "CE7E685F81294764991B716DEDFA4B15", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247059] "database_id": "d5321ba2-bfc3-4fe9-a45d-93a81204fed1", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247062] "user": "CE7E685F81294764991B716DEDFA4B15_4525WO7T3KQR6S7JDO8UFGZ2B_RT", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247109] "hdi_user": "CE7E685F81294764991B716DEDFA4B15_4525WO7T3KQR6S7JDO8UFGZ2B_DT" (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247112] }, (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247114] "tags": [ (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247117] "hana", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247214] "database", (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247239] "relational" (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247241] ] (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247244] } (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247246] ] (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:30.828#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-53828#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:29.247248] } (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.696030] @sap/hdi-deploy, version 5.7.0 (mode default), server version unknown (0.0.0.0), cloud version , node version 24.22.1, HDI version -1, container API version -1 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.696242] Deployment started at 2026-11-19 04:39:33 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.698068] Using hdb@2.30.1 for connection (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.698272] Detection of server version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.698310] Detection of cloud version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.698314] Detection of container API version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.698397] Detection of HDI version failed; root cause: HANA Database instance is stopped (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.699346] Deployment ended at 2026-11-19 04:39:33 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.699542] Error: Option parameter is not supported by the server; based on detected server version unknown (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.699760] (4s 568ms) (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.716382] npm notice (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.716415] npm notice New major version of npm available! 11.19.1 -> 12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.716420] npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.716426] npm notice To update run: npm install -g npm@12.2.3 (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.716428] npm notice (STDERR, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:33.798923] Exit status 1 (STDOUT, APP/TASK/deploy)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:34.746877] Cell c839c7b1-088e-41af-b9b7-66256aacd457 stopping instance 3d150212-f741-426e-b84c-5e4679c66be3 (STDOUT, CELL)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:34.746923] Cell c839c7b1-088e-41af-b9b7-66256aacd457 destroying container for instance 3d150212-f741-426e-b84c-5e4679c66be3 (STDOUT, CELL)#
+#2026 11 19 04:39:40.805#Z#DEBUG#16b5e55b-e3d3-11f1-9954-eeee0a9570a6.purchase-requisition-app-db-deployer#flowable-async-job-executor-thread-69230#
+[PollExecuteTaskStatusExecution] 36c706a8-22ff-4cd3-86ed-beed90f6e833 [2026-11-19T04:39:37.731495] Cell c839c7b1-088e-41af-b9b7-66256aacd457 successfully destroyed container for instance 3d150212-f741-426e-b84c-5e4679c66be3 (STDOUT, CELL)#

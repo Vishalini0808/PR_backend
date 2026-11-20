@@ -1,1 +1,1 @@
-ID,prNumber,title,description,requesterId,requesterName,requesterEmail,needByDate,currency,netAmount,taxAmount,totalAmount,status,organizationalUnit_ID,costCentre_ID,purchaseCategory_ID,deliveryLocation_ID,createdAt,createdBy,modifiedAt,modifiedBy
+ID,prNumber,title,description,requesterId,requesterName,requesterEmail,needByDate,currency,netAmount,taxAmount,totalAmount,status,organizationalUnitID,costCentreID,purchaseCategoryID,deliveryLocationID,createdAt,createdBy,modifiedAt,modifiedBy

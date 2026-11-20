@@ -18,8 +18,36 @@ service ProcurementService {
     // Attachments
     entity Attachments          as projection on db.Attachments;
 
+    entity ERPReferences as projection on db.ERPReferences;
+
 
     // PR Actions
+
+    action createPR(
+    title                : String,
+    description          : String,
+    requesterName        : String,
+    requesterEmail       : String,
+    organizationalUnitID : UUID,
+    costCentreID         : UUID,
+    purchaseCategoryID   : UUID,
+    deliveryLocationID   : UUID,
+    needByDate           : Date,
+    currency             : String,
+
+    items : many {
+        itemNumber      : Integer;
+        itemName        : String;
+        description     : String;
+        itemType        : String;
+        materialCode    : String;
+        quantity        : Decimal(15,2);
+        unitOfMeasure   : String;
+        unitPrice       : Decimal(15,2);
+        taxPercentage   : Decimal(5,2);
+    }
+
+) returns PurchaseRequisitions;
 
     action submitPR(prID: UUID) returns many ApprovalTasks;
 
@@ -29,8 +57,6 @@ service ProcurementService {
 
 
     // Approval Actions
-
-
     type ApprovePRResult {
         taskID      : UUID;
         taskStatus  : String;
@@ -54,5 +80,9 @@ service ProcurementService {
     // Procurement Action
 
     action releasePR(prID: UUID);
+
+
+    action createERPPurchaseRequisition(prID: UUID) returns String;
+
 
 }

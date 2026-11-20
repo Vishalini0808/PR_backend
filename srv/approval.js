@@ -85,10 +85,16 @@ async function approvePR(req) {
 
     if (nextTask) {
 
+        // duedate
+        const nextTaskDueDate = new Date();
+        nextTaskDueDate.setDate(nextTaskDueDate.getDate() + 3);
+
+
         // activate next task:
 
         await UPDATE(ApprovalTasks).set({
-            status: 'PENDING'
+            status: 'PENDING',
+            dueDate: nextTaskDueDate
         }).where({ ID: nextTask.ID });
 
         console.log("Next Approval task is Activated:", nextTask.ID);
@@ -160,6 +166,8 @@ async function rejectPR(req) {
     // Create rejection decision
     await INSERT.into(ApprovalDecisions).entries({
         decision: 'REJECT',
+        decidedByName: req.user.id,
+        decidedById: req.user.id,
         comments: comments,
         task_ID: taskID
     });
@@ -218,6 +226,8 @@ async function returnPR(req) {
     await INSERT.into(ApprovalDecisions).entries({
         ID: cds.utils.uuid(),
         decision: 'RETURN',
+        decidedByName: req.user.id,
+        decidedById: req.user.id,
         comments: comments,
         task_ID: taskID
     });
@@ -246,4 +256,4 @@ async function returnPR(req) {
 
 
 
-module.exports = { approvePR , rejectPR , returnPR };
+module.exports = { approvePR, rejectPR, returnPR };

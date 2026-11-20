@@ -58,7 +58,7 @@ entity PurchaseRequisitions : cuid, managed {
     title          : String(150) not null; 
     description    : String(500);
 
-    requesterId    : String(100) not null;
+    requesterId    : String(100) ;
     requesterName  : String(100);
     requesterEmail : String(150) @assert.format: '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$';
 

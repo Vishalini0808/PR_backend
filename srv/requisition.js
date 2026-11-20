@@ -15,6 +15,7 @@ let PurchaseCategories;
 let DeliveryLocations;
 let Budgets;
 let ApprovalMatrix;
+let ApproverAssignment;
 
 // Initialize remote Master Data connection
 async function connectMasterData() {
@@ -22,20 +23,29 @@ async function connectMasterData() {
     if (!masterService) {
         masterService = await cds.connect.to('MasterDataService');
 
+            console.log("Master service entity keys:");
+        console.log(Object.keys(masterService.entities));
+
+        console.log("Approver entity lookup:");
+        console.log(
+            masterService.entities['ApproverAssignment']
+        );
+
         ({
             OrganizationalUnits,
             CostCentres,
             PurchaseCategories,
             DeliveryLocations,
             Budgets,
-            ApprovalMatrix
+            ApprovalMatrix,
+            ApproverAssignment
         } = masterService.entities);
     }
 }
 
 
 // create PR
-async function validatePR(req) {
+async function createPR(req) {
 
     await connectMasterData();
 
@@ -46,9 +56,9 @@ async function validatePR(req) {
         return req.error(400, 'PR title is required.');
     }
 
-    if (!data.requesterId?.trim()) {
-        return req.reject(400, 'Requester ID is required.');
-    }
+    // if (!data.requesterId?.trim()) {
+    //     return req.reject(400, 'Requester ID is required.');
+    // }
 
     if (!data.requesterName?.trim()) {
         return req.error(400, 'Requester name is required.');
@@ -168,8 +178,6 @@ async function validatePR(req) {
     data.taxAmount = Number(taxAmount.toFixed(2));
     data.totalAmount = Number((netAmount + taxAmount).toFixed(2));
 
-    // // cycle
-    // const cycle = (pr.currentCycle ?? 0) + 1;
 
     // generate PR number
     const lastPR = await SELECT.one.from(PurchaseRequisitions)
@@ -182,8 +190,49 @@ async function validatePR(req) {
     // Initial status
     data.status = 'DRAFT';
 
-}
 
+    // Separate Header and Items
+
+    delete data.items;
+
+    //  Generate PR ID
+
+    const prID = cds.utils.uuid();
+
+    // Insert PR Header
+
+    await INSERT.into(PurchaseRequisitions).entries({
+        ...data,
+        requesterId : req.user.id,
+        ID: prID
+    });
+
+
+    // Insert PR Items
+
+    const itemEntries = items.map(item => {
+
+        return {
+            ...item,
+            ID: cds.utils.uuid(),
+            requisition_ID: prID
+        };
+
+    });
+
+    await INSERT.into(RequisitionItems).entries(itemEntries);
+
+
+    //  Return Created PR
+
+    const createdPR = await SELECT.one.from(PurchaseRequisitions)
+        .where({ ID: prID });
+
+    console.log(`PR with ID ${prID} successfully Created`)
+
+    return createdPR;
+
+}
 
 
 // submit PR
@@ -305,6 +354,8 @@ async function submitPR(req) {
     }).where({ ID: prID });
 
 
+    console.log("Budgets entity:", Budgets);
+console.log("Master service entities:", Object.keys(masterService.entities));
 
     // Check budget
     const financialYear = new Date(pr.needByDate).getUTCFullYear();
@@ -364,21 +415,37 @@ async function submitPR(req) {
     // cycle
     const cycle = (pr.currentCycle ?? 0) + 1;
 
+    // due date
+    const firstTaskDueDate = new Date();
+    firstTaskDueDate.setDate(firstTaskDueDate.getDate() + 3);
+
     // Create Approval task
-    const approvalTaskEntries = approvalRules.map((rule, index) => {
+    const approvalTaskEntries = await Promise.all(
+
+        approvalRules.map(async (rule, index) => {
+
+         const approver = await getAssignedApprover(rule, pr, req);
 
         return {
             taskNumber: `${pr.prNumber}-C${cycle}-A${rule.sequenceNumber}`,
             approvalLevel: rule.approvalLevel,
             sequenceNumber: rule.sequenceNumber,
             approverRole: rule.approverRole,
+            
+             // Employee fetched from ApproverAssignment
+            assignedApproverId: approver.employeeId,
+            assignedApproverName: approver.employeeName,
+
             submissionCycle: cycle,
             // status
             status: index === 0 ? 'PENDING' : 'WAITING',
+            // Due date
+            dueDate: index === 0 ? firstTaskDueDate : null,
+
             requisition_ID: prID
         };
 
-    });
+    }));
 
     // insert all approval tasks
 
@@ -403,7 +470,53 @@ async function submitPR(req) {
 
 }
 
+async function getAssignedApprover(rule, pr, req) {
 
+    await connectMasterData();
+
+    console.log("ApproverAssignment entity:", ApproverAssignment);
+    console.log("Master service connected:", !!masterService);
+
+
+    const conditions = {
+        approverRole: rule.approverRole,
+        organizationalUnit_ID: pr.organizationalUnitID,
+        status: 'ACTIVE'
+    };
+
+    // First preference: category-specific assignment
+    let assignments = await masterService.run(
+        SELECT.from(ApproverAssignment).where({
+            ...conditions,
+            purchaseCategory_ID: pr.purchaseCategoryID
+        })
+    );
+
+    // Second preference: general assignment (no category)
+    if (assignments.length === 0) {
+
+        assignments = await masterService.run(
+            SELECT.from(ApproverAssignment).where({
+                ...conditions,
+                purchaseCategory_ID: null
+            })
+        );
+    }
+
+    // Validate assignment
+    if (assignments.length === 0) {
+        return req.reject(400, `No active employee assigned for role ${rule.approverRole}`);
+    }
+
+    if (assignments.length > 1) {
+        return req.reject(400, `Multiple active employees found for role ${rule.approverRole}`);
+    }
+
+    return assignments[0];
+}
+
+
+// resubmit
 async function resubmitPR(req) {
 
     const { prID } = req.data;
@@ -428,13 +541,13 @@ async function resubmitPR(req) {
         );
     }
 
-    // if (pr.requesterId !== req.user.id) {
-    //     return req.reject(403, 'Only the original requester can resubmit this PR.');
-    // }
+    if (pr.requesterId !== req.user.id) {
+        return req.reject(403, 'Only the original requester can resubmit this PR.');
+    }
 
     // Reuse existing submission logic
     return submitPR(req);
 }
 
 
-module.exports = { submitPR, validatePR, resubmitPR };
+module.exports = {  createPR, submitPR, resubmitPR };

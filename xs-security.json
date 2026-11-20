@@ -1,0 +1,100 @@
+{
+  "xsappname": "purchase-requisition-app",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Requester",
+      "description": "Requester"
+    },
+    {
+      "name": "$XSAPPNAME.DepartmentManager",
+      "description": "DepartmentManager"
+    },
+    {
+      "name": "$XSAPPNAME.ITHead",
+      "description": "ITHead"
+    },
+    {
+      "name": "$XSAPPNAME.FinanceApprover",
+      "description": "FinanceApprover"
+    },
+    {
+      "name": "$XSAPPNAME.CFO",
+      "description": "CFO"
+    },
+    {
+      "name": "$XSAPPNAME.ProcurementOfficer",
+      "description": "ProcurementOfficer"
+    },
+    {
+      "name": "$XSAPPNAME.Administrator",
+      "description": "Administrator"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "Requester",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Requester"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "DepartmentManager",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.DepartmentManager"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "ITHead",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.ITHead"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "FinanceApprover",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.FinanceApprover"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "CFO",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.CFO"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "ProcurementOfficer",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.ProcurementOfficer"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "Administrator",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.Administrator"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "http://localhost:5000/**",
+      "https://*.cfapps.us10.hana.ondemand.com/**",
+      "https://*.applicationstudio.cloud.sap/**"
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-/* checksum : 131b4ca29278bc3d1a0f69e47c58ac56 */
+/* checksum : 0a018d5c39b30396819549b4335403d9 */
 @cds.external : true
 service MasterDataService {
   @cds.external : true
@@ -338,6 +338,62 @@ service MasterDataService {
     state : String(100);
     postalCode : String(20);
     country : String(100);
+  };
+
+  @cds.external : true
+  @cds.persistence.skip : true
+  entity ApproverAssignment {
+    @Core.ComputedDefaultValue : true
+    key ID : UUID not null;
+    @odata.Precision : 7
+    @odata.Type : 'Edm.DateTimeOffset'
+    @UI.HiddenFilter : true
+    @UI.ExcludeFromNavigationContext : true
+    @Core.Immutable : true
+    @Core.Computed : true
+    @Common.Label : 'Created On'
+    createdAt : Timestamp;
+    /** User's unique ID */
+    @UI.HiddenFilter : true
+    @UI.ExcludeFromNavigationContext : true
+    @Core.Immutable : true
+    @Core.Computed : true
+    @Common.Label : 'Created By'
+    createdBy : String(255);
+    @odata.Precision : 7
+    @odata.Type : 'Edm.DateTimeOffset'
+    @UI.HiddenFilter : true
+    @UI.ExcludeFromNavigationContext : true
+    @Core.Computed : true
+    @Common.Label : 'Changed On'
+    modifiedAt : Timestamp;
+    /** User's unique ID */
+    @UI.HiddenFilter : true
+    @UI.ExcludeFromNavigationContext : true
+    @Core.Computed : true
+    @Common.Label : 'Changed By'
+    modifiedBy : String(255);
+    @Validation.AllowedValues : [
+      {
+        $Type: 'Validation.AllowedValue',
+        @Core.SymbolicName: 'Active',
+        Value: 'ACTIVE'
+      },
+      {
+        $Type: 'Validation.AllowedValue',
+        @Core.SymbolicName: 'Inactive',
+        Value: 'INACTIVE'
+      }
+    ]
+    status : String default 'ACTIVE';
+    employeeId : String(50) not null;
+    employeeName : String(100) not null;
+    employeeEmail : String(150) not null;
+    approverRole : String(50) not null;
+    organizationalUnit_ID : UUID not null;
+    purchaseCategory_ID : UUID;
+    organizationalUnit : Association to one OrganizationalUnits on organizationalUnit.ID = organizationalUnit_ID;
+    purchaseCategory : Association to one PurchaseCategories on purchaseCategory.ID = purchaseCategory_ID;
   };
 
   @cds.external : true
